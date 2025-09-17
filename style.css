@@ -1,0 +1,498 @@
+/* =====================
+   Global Reset & Base
+===================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e6eff7;
+  color: #333;
+}
+
+/* =====================
+   Navbar
+===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.center-links {
+  flex: 1;
+  justify-content: center;
+}
+
+.center-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.center-links li a:hover {
+  color: #2563eb;
+}
+
+/* Dropdown as button */
+.dropdown > a.btn {
+  padding: 10px 20px;
+  background: #2563eb;
+  color: #fff !important;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.dropdown > a.btn:hover {
+  background: #1e40af;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 12px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown-content li a:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =====================
+   Hero Section
+===================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #e5edf5;
+  min-height: 70vh;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #222;
+}
+
+.hero-text h3 {
+  color: #5a4dff;
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.hero-text p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #5a4dff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background: #4338ca;
+}
+
+.hero-img img {
+  width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Login Form Container */
+.form-container {
+  width: 100%;
+  max-width: 380px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 4px rgba(37,99,235,0.3);
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button:hover {
+  background: #1e40af;
+}
+
+.error {
+  color: #e11d48;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+  .form-container h2 {
+    font-size: 22px;
+  }
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-img img {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    margin: 50px 20px;
+    padding: 20px;
+  }
+  .form-container h2 {
+    font-size: 22px;
+  }
+}
+/* Role Icon */
+.role-icon {
+  font-size: 50px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.role-icon .fa-user-tie {
+  color: #9333ea; /* Purple for admin */
+}
+
+.role-icon .fa-user {
+  color: #2563eb; /* Blue for employee */
+}
+/* Center the whole login box */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6eff7, #dbeafe);
+}
+
+/* Login Box */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px 30px;
+  background: #fff;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeSlide 0.8s ease-out;
+}
+
+/* Company Header */
+.company-header {
+  margin-bottom: 20px;
+}
+
+.company-header .logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Role Icon */
+.role-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  color: #2563eb;
+}
+
+/* Title */
+.form-container h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* Inputs (fixed design) */
+.form-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  display: block;
+  box-sizing: border-box;
+}
+
+.form-container input:focus {
+  border-color: #2563eb;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(37,99,235,0.3);
+}
+
+/* Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button:hover {
+  background: #1e40af;
+}
+
+/* Error Message */
+.error {
+  color: #e11d48;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Links below form */
+.form-links {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-links a {
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-links a:hover {
+  color: #9333ea;
+}
+
+/* Animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Role Icon */
+.role-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+/* Title */
+.form-container h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* Inputs */
+.form-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 10px rgba(37,99,235,0.3);
+}
+
+/* Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(45deg, #2563eb, #9333ea);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(147,51,234,0.5);
+}
+
+/* Links */
+.form-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-links a {
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-links a:hover {
+  color: #9333ea;
+}
+/* Logo Section */
+.login-logo {
+  margin-bottom: 15px;
+}
+
+.login-logo img {
+  max-width: 120px;
+  margin-bottom: 5px;
+}
+
+.login-logo h1 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e3a8a; /* deep blue */
+  letter-spacing: 1px;
+  margin: 0;
+}
+/* Company Header */
+.company-header {
+  margin-bottom: 15px;
+}
+
+.company-header .logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}

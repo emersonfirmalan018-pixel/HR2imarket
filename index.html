@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMarket HR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== Background Color ===== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
+      color: #333;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+       background: #f8f9fb;
+      color: #fff;
+    }
+
+    /* Logo + Text */
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    .brand img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .brand span {
+      font-size: 22px;
+      font-weight: bold;
+      color: #070707ff;
+    }
+/* Nav Container */
+    .nav-center {
+      background: #f8f9fb;
+      padding: 8px 20px;
+      border-radius: 8px;
+      display: flex;
+      gap: 25px;
+    }
+    .nav-center a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .nav-center a:hover {
+      color: #2563eb;
+    }
+    /* ===== Hero Section ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #2b3a67;
+    }
+    .hero-text h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .btn {
+      background: #2b3a67;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #3d4f8b;
+    }
+
+    /* ===== Hero Image ===== */
+    .hero-img img {
+      max-width: 450px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Image Animations (but NOT logo) ===== */
+    img:not(.brand img) {
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- Brand -->
+    <div class="brand">
+      <img src="logo.png" alt="iMarket Logo">
+      <span>iMarket</span>
+    </div>
+
+    <!-- Home & About Us inside container -->
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.php">About Us</a>
+    </div>
+
+    <!-- Sign In Dropdown -->
+    <ul class="nav-links right-links">
+      <li class="dropdown">
+        <a href="#" class="btn">Sign In ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="login.php?role=employee">Employee Access</a></li>
+          <li><a href="login.php?role=admin">Admin Panel</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to iMarket!</h1>
+      <h3>Your Growth, Our Priority</h3>
+      <p>
+        iMarket HR helps employees grow and succeed—manage skills, access learning, 
+        join training, prepare for future roles, and handle everyday HR needs with ease.
+      </p>
+      <a href="signup.php" class="btn">Get Started</a>
+    </div>
+    <div class="hero-img">
+      <img src="bg.jpg" alt="HR">
+    </div>
+  </section>
+</body>
+</html>
